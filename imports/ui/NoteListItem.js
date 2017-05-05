@@ -9,7 +9,7 @@ export const NoteListItem = (props) => {
       props.Session.set('selectedNoteId', props.note._id);
     }}>
       <h5>{props.note.title || 'Untitled note'}</h5>
-      <p>{props.note.body}</p>
+      {props.note.body}
       <p>{moment(props.note.updateAt).format('DD/M/YY')}</p>
       {props.note.selected ? 'selected' : undefined}
       <hr/>
