@@ -36,14 +36,16 @@ export class Editor extends React.Component {
       this.setState({
         title: this.props.note.title,
         body: this.props.note.body
-      })
+      });
+      // ALX Insert
+      this.refs.noteTitle.focus();
     }
   }
   render() {
     if (this.props.note) {
       return (
         <div>
-          <input type="text" value={this.state.title} placeholder="Untitled Note" onChange={this.handleTitleChange.bind(this)}/>
+          <input type="text" ref="noteTitle" value={this.state.title} placeholder="Untitled Note" onChange={this.handleTitleChange.bind(this)}/>
           <br/>
           <textarea value={this.state.body} placeholder="Your note text here" onChange={this.handleBodyChange.bind(this)}></textarea>
           <br/>
