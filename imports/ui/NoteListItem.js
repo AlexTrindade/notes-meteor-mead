@@ -2,6 +2,7 @@ import React from 'react';
 import moment from 'moment';
 import {Session} from 'meteor/session';
 import {createContainer} from 'meteor/react-meteor-data';
+import PropTypes from 'prop-types';
 
 export const NoteListItem = (props) => {
   return (
@@ -18,8 +19,8 @@ export const NoteListItem = (props) => {
 }
 
 NoteListItem.propTypes = {
-  note: React.PropTypes.object.isRequired,
-  Session: React.PropTypes.object.isRequired
+  note: PropTypes.object.isRequired,
+  Session: PropTypes.object.isRequired
 }
 
 export default createContainer(() => {

@@ -3,6 +3,7 @@ import {Session} from 'meteor/session';
 import {createContainer} from 'meteor/react-meteor-data';
 import {Meteor} from 'meteor/meteor';
 import {browserHistory} from 'react-router';
+import PropTypes from 'prop-types';
 
 import {Notes} from '../api/notes';
 
@@ -61,10 +62,10 @@ export class Editor extends React.Component {
 }
 
 Editor.propTypes ={
-  selectedNoteId: React.PropTypes.string,
-  note: React.PropTypes.object,
-  call: React.PropTypes.func.isRequired,
-  browserHistory: React.PropTypes.object.isRequired
+  selectedNoteId: PropTypes.string,
+  note: PropTypes.object,
+  call: PropTypes.func.isRequired,
+  browserHistory: PropTypes.object.isRequired
 }
 
 export default createContainer(() => {
